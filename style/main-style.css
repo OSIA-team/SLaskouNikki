@@ -172,6 +172,81 @@ nav li a:hover{
   padding: 60px 16px;
 }
 
+#contact{
+  min-height: 500px;
+  height: 500px;
+  background-image: url('../img/nikki-bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#contact .contact-input{
+    width: 100%;
+    min-height: 30px;
+    padding-left: 30px;
+    background-position: left center;
+}
+
+#contact input, textarea{
+  border: 1px solid #808080;
+  background-color: transparent;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+#contact input[type="submit"]{
+  font-family: 'Libre Baskerville', serif;
+  padding: 8px;
+  float: right;
+}
+
+#contact .mail-input{
+  background-image: url('../img/mailicon.svg');
+  background-repeat: no-repeat;
+}
+
+#contact .name-input{
+  background-image: url('../img/personicon.svg');
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
+
+#contact .phone-input{
+  background-image: url('../img/phoneicon.svg');
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
+
+#contact textarea{
+  width: 100%;
+  min-height: 100px;
+  background-image: url('../img/texticon.svg');
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
+
+#contact .form-wrap{
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  max-width: 540px;
+  color: grey;
+  display: flex;
+  align-items: center;
+}
+
+#contact form{
+  flex: 0 0 60%;
+}
+
+#contact .contact-list{
+ flex: 0 0 40%;
+}
+
+
 #instalerie h1, #instalerie h4{
   text-align: center;
 }
@@ -220,6 +295,108 @@ p.description{
   background-color: #25292D;
   color: rgba(255, 255, 255, 0.89);
   text-decoration: underline;
+}
+
+
+.social{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.social .twitter{
+  background-color: #1DA1F2;
+}
+
+.social .instagram{
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.social .facebook{
+  background-color: #4267b2;
+}
+
+.social.wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 10px 15px;
+  margin: 20px;
+}
+
+.social a{
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.social svg{
+  width: 20px;
+  margin-right: 10px;
+}
+
+footer ul{
+  margin: 0 auto;
+}
+
+footer ul li{
+  list-style: none;
+  display: inline-block;
+}
+
+footer nav ul{
+  list-style: none;
+}
+
+footer nav ul li{
+  margin-left: 50px;
+  display: inline-block;
+}
+
+footer nav ul li:first-child{
+  margin-left: 0px;
+}
+
+footer nav .logo{
+  height: 68px;
+  overflow: hidden;
+}
+
+footer nav .logo svg{
+  max-width: 422px;
+  height: auto;
+  margin-top: -66px;
+  margin-left: -50px;
+}
+
+footer nav li a:hover{
+  color: black;
+  border-bottom:2px solid #808080;
+}
+footer nav{
+  box-shadow: none;
+  min-height: auto;
+}
+
+footer p{
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 32px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer{
+  text-align: center;
+  padding: 60px 8px 20px;
 }
 
 @media only screen and (max-width: 980px) {
