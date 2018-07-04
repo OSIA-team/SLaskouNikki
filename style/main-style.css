@@ -224,6 +224,7 @@ nav li a:hover{
 #contact textarea{
   width: 100%;
   min-height: 100px;
+  padding-left: 30px;
   background-image: url('../img/texticon.svg');
   background-repeat: no-repeat;
   background-size: 22px;
@@ -289,6 +290,7 @@ p.description{
   padding: 20px 42px;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .btn-transparent:hover{
@@ -399,6 +401,155 @@ footer{
   padding: 60px 8px 20px;
 }
 
+.banner{
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner.books{
+  background-image: url('https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2017/04/shutterstock_518868568-pr-250417-Stone-arch-over-the-sea-at-the-rocky-coastline-on-Nusa-Penida-island-near-Bali-in-Indonesia.jpg');
+}
+
+#basket, #order-list{
+  min-height: 70vh;
+  padding-top: 30px;
+}
+#basket .product p{
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+#basket .product{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 22px -3px rgba(0,0,0,0.4);
+  padding: 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#basket .btn-transparent{
+  font-size: 16px;
+  padding: 8px 10px;
+}
+
+#basket .product h1{
+  text-align: left;
+}
+
+#basket .product img{
+  width: 100%;
+  height: auto;
+}
+
+#basket .product .image{
+  flex: 0 0 28%;
+  margin-right: 2%;
+}
+
+#basket h1, #order-list h1{
+  text-align: center;
+  font-size: 20px;
+}
+
+#order-list .container{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#order-list{
+    padding: 60px 0px 100px;
+}
+
+#order-list .btn-transparent{
+   background: transparent;
+   font-size: 14px;
+   line-height: 16px;
+   padding: 10px;
+}
+
+#order-list .cena{
+  margin-right: 10px;
+}
+
+#order-list .btn-transparent:hover {
+    background-color: #25292D;
+    color: rgba(255, 255, 255, 0.89);
+    text-decoration: underline;
+}
+
+#order-list .item-poster{
+  flex: 0 0 50px;
+}
+
+#order-list .item-poster img{
+  width: 100%;
+  height: auto;
+}
+
+#order-list .item{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 22px -3px rgba(0,0,0,0.4);
+    padding: 8px 40px;
+    align-items: center;
+    align-content: center;
+}
+
+#order-list .up-arrow{
+    border-left: 1px solid #cecece;
+    border-top: 1px solid #cecece;
+    height: 12px;
+    width: 12px;
+    transform: rotate(45deg);
+}
+
+#order-list .down-arrow{
+    border-right: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
+    height: 12px;
+    width: 12px;
+    transform: rotate(45deg);
+}
+
+#order-list .item .description{
+  font-size: 13px;
+  font-weight: bold;
+  color: #656464;
+}
+
+#order-list .cross-close{
+  color: #e00000;
+    font-size: 31px;
+    font-weight: lighter;
+}
+
+#order-list .count-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#order-list .count-text{
+  text-align: center;
+  font-size: 12px;
+  padding: 3px;
+  flex: 0 0 100%;
+}
+
+.suma{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
 @media only screen and (max-width: 980px) {
   #topstory{
     height: auto;
@@ -407,6 +558,15 @@ footer{
   #topstory .container{
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  #nikki .container .left{
+    display: none;
+  }
+
+  #topstory .container .left, #nikki .container .right  {
+    flex: 0 0 100%;
+    margin-left: 0px;
   }
 
 }
