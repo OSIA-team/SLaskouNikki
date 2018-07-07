@@ -121,8 +121,34 @@
 
             <div class="suma">
               <div class="cena">Celkem s DPH: 2 154,00 Kč</div>
-              <input type="submit" class="btn-transparent" name="send" value="DOKONČIT OBJEDNÁVKU">
             </div>
+
+            <div class="shipping">
+              <h1>Dodací údaje</h1>
+              <div class="row col-6">
+                <label for="jmeno">Jméno</label>
+                <input id="jmeno" type="text" name="jmeno" value="" autocomplete="name" required>
+              </div>
+              <div class="row col-6">
+                <label for="prijmeni">Příjmení</label>
+                <input id="prijmeni" type="text" name="prijmeni" value="" required>
+              </div>
+              <div class="row col-6">
+                <label for="street">Ulice, č.p.</label>
+                <input id="street" type="text" name="ulice" value="" autocomplete="shipping street-address" required>
+              </div>
+              <div class="row col-6">
+                <label for="city">Město</label>
+                <input id="city" type="text" name="mesto" value="" autocomplete="shipping locality" required>
+              </div>
+              <div class="row col-6">
+                <label for="psc">PSČ</label>
+                <input id="psc" type="text" name="psc" value="" autocomplete="shipping postal-code" required>
+              </div>
+
+            </div>
+
+            <input type="submit" class="btn-transparent" name="send" value="DOKONČIT OBJEDNÁVKU">
           </form>
 
         </div>

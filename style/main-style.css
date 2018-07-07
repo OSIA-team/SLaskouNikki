@@ -550,6 +550,51 @@ footer{
   justify-content: flex-end;
   margin-top: 50px;
 }
+
+.shipping label{
+  width: 100%;
+  display: block;
+}
+
+.shipping input{
+  margin-bottom: 6px;
+}
+
+.shipping input[type="submit"]{
+  float: right;
+  margin-top: 10px;
+}
+
+.shipping input[type="text"]{
+  margin-top: 4px;
+  margin-bottom: 0px;
+  border-radius: 2px;
+  border: 1px solid #c1c1c1;
+  height: 28px;
+  font-size: 14px;
+  width: 100%;
+  padding: 0 6px;
+  line-height: 28px;
+  color: #3e3e3e;
+}
+
+.shipping .row{
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.shipping{
+  max-width: 350px;
+  margin: 27px 0;
+}
+
+.row.col-6{
+  max-width: 350px;
+}
+
+#order-list input.btn-transparent {
+    float: right;
+}
 @media only screen and (max-width: 980px) {
   #topstory{
     height: auto;
