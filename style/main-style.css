@@ -508,6 +508,7 @@ footer{
     height: 12px;
     width: 12px;
     transform: rotate(45deg);
+    cursor: pointer;
 }
 
 #order-list .down-arrow{
@@ -516,6 +517,7 @@ footer{
     height: 12px;
     width: 12px;
     transform: rotate(45deg);
+    cursor: pointer;
 }
 
 #order-list .item .description{
