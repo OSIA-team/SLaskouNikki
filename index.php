@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style/main-style.css">
-    <title>S Láskou Nikki</title>
-  </head>
+<?php
+require_once 'temp/head.html';
+require_once 'function/contact-mail.php';
+
+
+?>
   <body>
     <header>
       <nav>
         <div class="container">
-          <a href="index.html">
+          <a href="index.php">
             <div class="logo">
               <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1.05833E+006px" height="529167px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
               viewBox="0 0 1058333 529167"
@@ -25,75 +24,98 @@
               </svg>
             </div></a>
           <ul>
-            <li> <a href="index.html">DOMŮ</a></li>
+            <li> <a href="index.php">DOMŮ</a></li>
             <li> <a href="#nikki">O MNĚ</a></li>
-            <li> <a href="#nikki">KNIHY</a></li>
-            <li> <a href="#nikki">KOŠÍK</a></li>
+            <li> <a href="knihy.php">KNIHY</a></li>
           </ul>
         </div>
       </nav>
 
-      <div class="banner books"></div>
+      <div id="topstory">
+          <div class="container">
+              <div class="left">
+                  <h1>Láska z bali</h1>
+                  <h4>čtení k čaji, na pláž a pro chvilky oddechu</h4>
+                  <p class="description">Milí čtenáři, díváte se na cestopisný román, který Vás zavede na druhý
+                      konec světa. Když se dvacetiletá studentka práv rozhodne, že prázdniny nestráví doma,
+                      ale v pralese, strhne se lavina dobrodružství. Nestačí se vzpamatovat z přeletů a
+                      ocitne se na lodi, potápí se s karetami, čistí želví kladiště a to všechno s partou
+                      cizích lidí. Pak, uprostřed panenské přírody Sumatry, jsou už sehraná parta.
+                      Všechno ale musí jednou skončit a hrdinka příběhu je náhle na pochybách. Co když se jí
+                      nechce domů? A co když někoho potkala?</p>
+                    <div class="links">
+                    <a href="kosik.php" class="btn-transparent">Koupit Knihu</a>
+                    <a target="_blank" href="files/Uryvek.pdf" class="btn-transparent">Přečíst úryvek</a> <?php // zakazat? ?>
+                  </div>
+              </div>
+              <div class="right">
+                <img src="img/kniha.png" alt="">
+              </div>
+          </div>
+      </div>
+
     </header>
+    <div id="blog-hints">
+      <h1>Osobní blog</h1>
+      <h4>Osobní blog již brzy</h4>
+    </div>
 
-    <div id="basket" class="">
-        <h1>Mé knihy</h1>
-
-        <div class="product">
-          <div class="image">
-              <img src="img/kniha.png" alt="kniha">
+    <div id="nikki">
+        <div class="container">
+          <div class="left">
+            <img src="img/nikki.png" alt="">
           </div>
-          <div class="info">
-            <h1>Kniha pevná vzaba</h1>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#" class="btn-transparent">Přečíst úryvek</a>
-            <a href="#" class="btn-transparent">Koupit</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="image">
-              <img src="img/kniha.png" alt="kniha">
-          </div>
-          <div class="info">
-            <h1>Kniha Elektronická</h1>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#" class="btn-transparent">Přečíst úryvek</a>
-            <a href="#" class="btn-transparent">Koupit</a>
-          </div>
+            <div class="right">
+                <h1>Nicol Villimová</h1>
+                <h4>Spisovatelka/cestovatelka</h4>
+                <div class="links">
+                    Jsem sedmadvacetiletá správkyně majetku s neutuchající vášní cestovat a objevovat. Jsem srdcem dobrodruh a snílek, s hlavou věčně v oblacích, s prstem věčně bloudícím po mapě. V mysli mám pořád sbaleno a jsem připravena vyrazit kamkoliv, na kteroukoliv světovou stranu. Ve skutečnosti se to tak snadno praktikovat nedá. Většina z nás to zná - práce a povinnosti... Každý má to své.  I přesto se snažím najít si co nejvíc chvil k poznávání nových míst. A nemusí to být zrovna bujné ostrovy porostlé pralesem, stačí vyjít za humna a navštívit nějakou hezkou zříceninu, vzít si piknik a poobědvat u rybníka, nebo sednout na vlak a vydat se někam dál.
+                        Na cestách poznávám spoustu krásných  míst a na spoustu z nich se ráda vracím. Během přesunů a přeletů mám většinou dost času na přemýšlení, a tak se pokaždé uchýlím k mé oblíbené činnosti - vybalím svůj bloček s propiskou, nebo poopadnu nejbližší cár papíru (ubrousek, noviny, účtenka, ...) a hezky si sesumíruju, co jsem viděla a zažila, hlavně abych na to nezapomněla. Fotografie jsou cenným zdrojem vpomínek, ale slovo má svou sílu. Postupem času jsem zjistila, že mě baví psát. Psaní je svoboda. Můžu si sepsat zážitky a dojmy ze všeho, co jsem prožila a zároveň mohu popustit uzdu fantazii a dokreslit příběh tak, abych se k němu ráda vracela.
+                       A tak jsem vytvořila cestopisný román. Trochu naivní, trochu vtipný, ale hlavně cestopisný a hlavně román. Láska z Bali je mou prvotinou, kterou jsem si splnila svůj sen - vydat knihu.
+                    <!--   <a href="#" class="btn-transparent">Zobrazit celé BIO</a> -->
+                    </div>
+            </div>
         </div>
     </div>
 
-    <div id="contact" class="">
-      <div class="form-wrap">
+    <div id="instalerie">
+      <h1>Fotogalerie</h1>
+      <h4>Fotografie z bali již brzy</h4>
 
-        <div class="contact-list">
-          <div class="">Nicol Willimová  </div>
-          <div class="">info@osia.cz</div>
-          <div class="">+420 736  289 288  </div>
-        </div>
+      <div class="social">
+        <a href="https://www.facebook.com/SLaskouNiki/" target="_blank">
+          <div class="social wrap facebook">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 155.139 155.139;" xml:space="preserve">
+      <g>
+      	<path id="f_1_" style="fill:#FFFFFF;" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
+      		c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
+      		v20.341H37.29v27.585h23.814v70.761H89.584z"/>
+      </g>
+</svg>
 
-        <form class="" action="index.html" method="post">
-          <input class="contact-input name-input" type="text" name="jmeno" value="" required>
-          <input class="contact-input mail-input" type="email" name="email" value="" required>
-          <input class="contact-input phone-input" type="text" name="" value="" required>
-          <textarea name="message text-input"></textarea>
-          <input type="submit" name="send" value="ODESLAT ZPRÁVU">
-        </form>
+            <span>Jsem na Facebooku!</span>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/s_laskou_niki/"  target="_blank">
+          <div class="social wrap instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            	<path
+            		style="fill:#ffffff"
+            		d="M256,49.471c67.266,0,75.233.257,101.8,1.469,24.562,1.121,37.9,5.224,46.778,8.674a78.052,78.052,0,0,1,28.966,18.845,78.052,78.052,0,0,1,18.845,28.966c3.45,8.877,7.554,22.216,8.674,46.778,1.212,26.565,1.469,34.532,1.469,101.8s-0.257,75.233-1.469,101.8c-1.121,24.562-5.225,37.9-8.674,46.778a83.427,83.427,0,0,1-47.811,47.811c-8.877,3.45-22.216,7.554-46.778,8.674-26.56,1.212-34.527,1.469-101.8,1.469s-75.237-.257-101.8-1.469c-24.562-1.121-37.9-5.225-46.778-8.674a78.051,78.051,0,0,1-28.966-18.845,78.053,78.053,0,0,1-18.845-28.966c-3.45-8.877-7.554-22.216-8.674-46.778-1.212-26.564-1.469-34.532-1.469-101.8s0.257-75.233,1.469-101.8c1.121-24.562,5.224-37.9,8.674-46.778A78.052,78.052,0,0,1,78.458,78.458a78.053,78.053,0,0,1,28.966-18.845c8.877-3.45,22.216-7.554,46.778-8.674,26.565-1.212,34.532-1.469,101.8-1.469m0-45.391c-68.418,0-77,.29-103.866,1.516-26.815,1.224-45.127,5.482-61.151,11.71a123.488,123.488,0,0,0-44.62,29.057A123.488,123.488,0,0,0,17.3,90.982C11.077,107.007,6.819,125.319,5.6,152.134,4.369,179,4.079,187.582,4.079,256S4.369,333,5.6,359.866c1.224,26.815,5.482,45.127,11.71,61.151a123.489,123.489,0,0,0,29.057,44.62,123.486,123.486,0,0,0,44.62,29.057c16.025,6.228,34.337,10.486,61.151,11.71,26.87,1.226,35.449,1.516,103.866,1.516s77-.29,103.866-1.516c26.815-1.224,45.127-5.482,61.151-11.71a128.817,128.817,0,0,0,73.677-73.677c6.228-16.025,10.486-34.337,11.71-61.151,1.226-26.87,1.516-35.449,1.516-103.866s-0.29-77-1.516-103.866c-1.224-26.815-5.482-45.127-11.71-61.151a123.486,123.486,0,0,0-29.057-44.62A123.487,123.487,0,0,0,421.018,17.3C404.993,11.077,386.681,6.819,359.866,5.6,333,4.369,324.418,4.079,256,4.079h0Z"/>
+            	<path
+            		style="fill:#ffffff"
+            		d="M256,126.635A129.365,129.365,0,1,0,385.365,256,129.365,129.365,0,0,0,256,126.635Zm0,213.338A83.973,83.973,0,1,1,339.974,256,83.974,83.974,0,0,1,256,339.973Z"/>
+            	<circle
+            		style="fill:#ffffff"
+            		cx="390.476" cy="121.524" r="30.23"/>
+            </svg>
+            <span>Sleduj mé fotky!</span>
+          </div>
+        </a>
       </div>
     </div>
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="#">DOMŮ</a></li>
-          <li><a href="#">O MNĚ</a></li>
-          <li><a href="#">KNIHY</a></li>
-        </ul>
-      </nav>
-
-      <p>"Lorem ipsum nějaký citát z knihy. Nebo možná něco jiného co zaujmě pozornost".</p>
-
-      <span style="color: grey;">S láskou Nikki &copy; 2018</span>
-    </footer>
-  </body>
-</html>
+  <?php
+    require_once 'temp/footer.html';
+?>

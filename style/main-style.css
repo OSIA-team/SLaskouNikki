@@ -13,7 +13,7 @@ html, body, nav, header, article, p, h1, h2, h3, h4, h5, h6{
 }
 
 body{
-    font-family: 'Muli', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 nav{
@@ -185,10 +185,10 @@ nav li a:hover{
 }
 
 #contact .contact-input{
-    width: 100%;
-    min-height: 30px;
-    padding-left: 30px;
-    background-position: left center;
+  width: 100%;
+  min-height: 30px;
+  padding-left: 30px;
+  background-position: left center;
 }
 
 #contact input, textarea{
@@ -244,7 +244,7 @@ nav li a:hover{
 }
 
 #contact .contact-list{
- flex: 0 0 40%;
+  flex: 0 0 40%;
 }
 
 
@@ -409,7 +409,7 @@ footer{
 }
 
 .banner.books{
-  background-image: url('https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2017/04/shutterstock_518868568-pr-250417-Stone-arch-over-the-sea-at-the-rocky-coastline-on-Nusa-Penida-island-near-Bali-in-Indonesia.jpg');
+  background-image: url("../img/bg-hp1.jpg");
 }
 
 #basket, #order-list{
@@ -463,14 +463,14 @@ footer{
 }
 
 #order-list{
-    padding: 60px 0px 100px;
+  padding: 60px 0px 100px;
 }
 
 #order-list .btn-transparent{
-   background: transparent;
-   font-size: 14px;
-   line-height: 16px;
-   padding: 10px;
+  background: transparent;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px;
 }
 
 #order-list .cena{
@@ -478,9 +478,9 @@ footer{
 }
 
 #order-list .btn-transparent:hover {
-    background-color: #25292D;
-    color: rgba(255, 255, 255, 0.89);
-    text-decoration: underline;
+  background-color: #25292D;
+  color: rgba(255, 255, 255, 0.89);
+  text-decoration: underline;
 }
 
 #order-list .item-poster{
@@ -493,29 +493,31 @@ footer{
 }
 
 #order-list .item{
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-between;
-    box-shadow: 0px 0px 22px -3px rgba(0,0,0,0.4);
-    padding: 8px 40px;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  box-shadow: 0px 0px 22px -3px rgba(0,0,0,0.4);
+  padding: 8px 40px;
+  align-items: center;
+  align-content: center;
 }
 
 #order-list .up-arrow{
-    border-left: 1px solid #cecece;
-    border-top: 1px solid #cecece;
-    height: 12px;
-    width: 12px;
-    transform: rotate(45deg);
+  border-left: 1px solid #cecece;
+  border-top: 1px solid #cecece;
+  height: 12px;
+  width: 12px;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 #order-list .down-arrow{
-    border-right: 1px solid #cecece;
-    border-bottom: 1px solid #cecece;
-    height: 12px;
-    width: 12px;
-    transform: rotate(45deg);
+  border-right: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  height: 12px;
+  width: 12px;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 #order-list .item .description{
@@ -526,8 +528,8 @@ footer{
 
 #order-list .cross-close{
   color: #e00000;
-    font-size: 31px;
-    font-weight: lighter;
+  font-size: 31px;
+  font-weight: lighter;
 }
 
 #order-list .count-wrap{
@@ -549,6 +551,51 @@ footer{
   align-content: center;
   justify-content: flex-end;
   margin-top: 50px;
+}
+
+.shipping label{
+  width: 100%;
+  display: block;
+}
+
+.shipping input{
+  margin-bottom: 6px;
+}
+
+.shipping input[type="submit"]{
+  float: right;
+  margin-top: 10px;
+}
+
+.shipping input[type="text"]{
+  margin-top: 4px;
+  margin-bottom: 0px;
+  border-radius: 2px;
+  border: 1px solid #c1c1c1;
+  height: 28px;
+  font-size: 14px;
+  width: 100%;
+  padding: 0 6px;
+  line-height: 28px;
+  color: #3e3e3e;
+}
+
+.shipping .row{
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.shipping{
+  max-width: 350px;
+  margin: 27px 0;
+}
+
+.row.col-6{
+  max-width: 350px;
+}
+
+#order-list input.btn-transparent {
+  float: right;
 }
 @media only screen and (max-width: 980px) {
   #topstory{

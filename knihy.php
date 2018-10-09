@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style/main-style.css">
-    <title>S Láskou Nikki</title>
-  </head>
+<?php
+require_once 'temp/head.html';
+?>
   <body>
     <header>
       <nav>
         <div class="container">
-          <a href="index.html">
+          <a href="index.php">
             <div class="logo">
               <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1.05833E+006px" height="529167px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
               viewBox="0 0 1058333 529167"
@@ -25,10 +21,10 @@
               </svg>
             </div></a>
           <ul>
-            <li> <a href="index.html">DOMŮ</a></li>
-            <li> <a href="#nikki">O MNĚ</a></li>
-            <li> <a href="#nikki">KNIHY</a></li>
-            <li> <a href="#nikki">KOŠÍK</a></li>
+            <li> <a href="index.php">DOMŮ</a></li>
+            <li> <a href="index.php#nikki">O MNĚ</a></li>
+            <li> <a href="knihy.php">KNIHY</a></li>
+            <li> <a href="kosik.php">KOŠÍK</a></li>
           </ul>
         </div>
       </nav>
@@ -36,110 +32,41 @@
       <div class="banner books"></div>
     </header>
 
-    <div id="order-list" class="">
-        <h1>Rekapitulace objednávky</h1>
+    <div id="basket" class="">
+        <h1>Mé knihy</h1>
 
-        <div class="container">
-          <form class="" action="index.html" method="post">
-            <div class="item">
-              <div class="item-poster">
-                    <img src="img/kniha.png" alt="">
-              </div>
-              <div class="name">
-                <h3>Láska z Bali</h3>
-              </div>
-
-              <div class="description">Pevná vazba</div>
-
-              <div class="count-wrap">
-                <div class="up-arrow"></div>
-                <div class="count-text">
-                  <div class="">
-                    Počet kusů
-                  </div>
-                  <div class="">
-                    <span class="real-count">2</span> kusy
-                  </div>
-                </div>
-                <div class="down-arrow"></div>
-              </div>
-
-              <div class="cross-close">&times;</div>
-            </div>
-
-            <div class="item">
-              <div class="item-poster">
-                    <img src="img/kniha.png" alt="">
-              </div>
-              <div class="name">
-                <h3>Láska z Bali</h3>
-              </div>
-
-              <div class="description">Pevná vazba</div>
-
-              <div class="count-wrap">
-                <div class="up-arrow"></div>
-                <div class="count-text">
-                  <div class="">
-                    Počet kusů
-                  </div>
-                  <div class="">
-                    <span class="real-count">2</span> kusy
-                  </div>
-                </div>
-                <div class="down-arrow"></div>
-              </div>
-
-              <div class="cross-close">&times;</div>
-            </div>
-
-            <div class="item">
-              <div class="item-poster">
-                    <img src="img/kniha.png" alt="">
-              </div>
-              <div class="name">
-                <h3>Láska z Bali</h3>
-              </div>
-
-              <div class="description">Pevná vazba</div>
-
-              <div class="count-wrap">
-                <div class="up-arrow"></div>
-                <div class="count-text">
-                  <div class="">
-                    Počet kusů
-                  </div>
-                  <div class="">
-                    <span class="real-count">2</span> kusy
-                  </div>
-                </div>
-                <div class="down-arrow"></div>
-              </div>
-
-              <div class="cross-close">&times;</div>
-            </div>
-
-            <div class="suma">
-              <div class="cena">Celkem s DPH: 2 154,00 Kč</div>
-              <input type="submit" class="btn-transparent" name="send" value="DOKONČIT OBJEDNÁVKU">
-            </div>
-          </form>
-
+        <div class="product">
+          <div class="image">
+              <img src="img/kniha.png" alt="kniha">
+          </div>
+          <div class="info">
+            <h1>Láska z Bali</h1>
+            <p class="description">Milí čtenáři, díváte se na cestopisný román, který Vás zavede na druhý
+                konec světa. Když se dvacetiletá studentka práv rozhodne, že prázdniny nestráví doma,
+                ale v pralese, strhne se lavina dobrodružství. Nestačí se vzpamatovat z přeletů a
+                ocitne se na lodi, potápí se s karetami, čistí želví kladiště a to všechno s partou
+                cizích lidí. Pak, uprostřed panenské přírody Sumatry, jsou už sehraná parta.
+                Všechno ale musí jednou skončit a hrdinka příběhu je náhle na pochybách. Co když se jí
+                nechce domů? A co když někoho potkala?</p>
+            <a target="_blank" href="files/Uryvek.pdf" class="btn-transparent">Přečíst úryvek</a>
+            <a href="kosik.php" class="btn-transparent">Koupit</a>
+          </div>
         </div>
+<!--
+        <div class="product">
+          <div class="image">
+              <img src="img/kniha.png" alt="kniha">
+          </div>
+          <div class="info">
+            <h1>Kniha Elektronická</h1>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#" class="btn-transparent">Přečíst úryvek</a>
+            <a href="#" class="btn-transparent">Koupit</a>
+          </div>
+        </div>
+
+        -->
     </div>
-
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="#">DOMŮ</a></li>
-          <li><a href="#">O MNĚ</a></li>
-          <li><a href="#">KNIHY</a></li>
-        </ul>
-      </nav>
-
-      <p>"Lorem ipsum nějaký citát z knihy. Nebo možná něco jiného co zaujmě pozornost".</p>
-
-      <span style="color: grey;">S láskou Nikki &copy; 2018</span>
-    </footer>
-  </body>
-</html>
+<?php
+require_once 'temp/footer.html';
+?>

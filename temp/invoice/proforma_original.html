@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Zálohová faktura</title>
+</head>
+<body>
+<style>
+    table.zbozi {
+        border: 1px #2a3133 solid;
+    }
+    .info {
+        width: 100px;
+    }
+
+    .center {
+        text-align: center;
+    }
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    section.info {
+        width: 100%;
+        height: 200px;
+        background: aqua;
+        margin: auto;
+        padding: 10px;
+    }
+    .odberatel{
+        border: 2px solid black;
+        padding-left: 5px;
+    }
+    .bankinfo{
+        border: none;
+    }
+    .widBordered {
+        border: 2px solid black;
+        font-weight: bold;
+        width: 170px;
+        text-align: center;
+    }
+
+    .icdic {
+        color: #1a5dac;
+        border: none;
+        font-weight: bold;
+    }
+
+    .space {
+        height: 100px;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .underline{
+        border-bottom: 1px solid black;
+        width: 100%;
+        display: block;
+        padding-top: -50px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 13px;
+        color: #1a5dac;
+    }
+    .modra {
+        color: #1a5dac;
+    }
+</style>
+
+<h1 style="color: #1a5dac; text-align: right" >Zálohová faktura</h1>
+<div class="underline"></div>
+<div>
+    <h2>Dodavatel:</h2>
+    <p class="bold">
+        Songe s.r.o.<br>
+        Národní gardy 1239 <br>
+        Třebechovice pod Orebem, 50346 CZ <br>
+        napis@tovarnanaradost.cz</p>
+</div>
+<div class="space"></div>
+<div>
+  <table class="icdic">
+      <tr>
+          <td style="width: 30px">IČ:</td><td>05293103</td>
+      </tr>
+      <tr>
+          <td style="width: 30px">DIČ:</td><td>CZ05293103</td>
+      </tr>
+  </table>
+</div>
+<table>
+            <tr>
+                <td style="width: 100px">Číslo účtu:</td><td class="widBordered">2801249841/2010</td>
+                <td rowspan="4" class="odberatel bold">
+                    <span class="modra" style="padding-bottom: -2px">Odběratel:</span><br>
+                    Nicol Villimová<br>
+                    Krátká 3<br>
+                    Moravany, 664 48<br>
+                    Česká republika
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100px">SWIFT:</td><td class="widBordered">FIOBCZPPXXX</td>
+            </tr>
+            <tr>
+                <td style="width: 100px">IBAN:</td><td class="widBordered">CZ3920100000002001249843</td>
+            </tr>
+            <tr>
+                <td style="width: 100px">Variabilní symbol:</td><td class="widBordered">2018106783</td>
+            </tr>
+</table>
+<div></div>
+<table>
+    <tr>
+        <td class="info">Způsob platby:</td><td class="info center">bankovní převod</td>
+    </tr>
+    <tr>
+        <td class="info">Datum vystavení:</td><td class="info center">9. 7. 2018</td>
+    </tr>
+    <tr>
+        <td class="info">Datum splatnosti:</td><td class="info center">23. 7. 2018</td>
+    </tr>
+</table>
+<div></div>
+<table class="zbozi">
+    <tr class="bold">
+        <th style="width: 230px">Položka</th><th style="text-align: right; width: 100px;">Cena za položku</th><th style="text-align: right; width: 70px;">Množství</th><th style="text-align: right; width: 110px;">Cena celkem s DPH</th>
+    </tr>
+    <tr>
+        <td style="width: 230px">Záloha na Továrna na sny - Samostatně</td><td style="width: 100px; text-align: right">300,00 CZK</td><td style="width: 70px; text-align: right">1 ks</td><td style="width: 110px; text-align: right">300,00 CZK</td>
+    </tr>
+    <tr>
+        <td style="width: 230px">Záloha na Doprava Česko</td><td style="width: 100px; text-align: right">69,00 CZK</td><td style="width: 70px; text-align: right">1 ks</td><td style="width: 110px; text-align: right">69,00 CZK</td>
+    </tr>
+</table>
+<div></div>
+
+<table class="widBordered" style="width: 510px;">
+    <tr class="bold">
+        <th style="text-align: left">Celkem k úhradě s DPH:</th><th style="text-align: right">389,00 CZK</th>
+    </tr>
+</table>
+<div>
+    <p>Tato zálohová faktura neslouž́í jako daňový doklad. Daňový doklad obdržíte po jejím uhrazení.</p>
+</div>
+<div class="space">
+
+</div>
+<table>
+    <tr>
+        <td style="width: 300px" ></td><td class="bold">Vystavil, razítko, podpis</td>
+    </tr>
+    <tr>
+        <td style="width: 300px" ></td><td><img src="temp/invoice/podpis.png" width="170px" /></td>
+    </tr>
+</table>
+
+</body>
+</html>
