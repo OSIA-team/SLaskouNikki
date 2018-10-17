@@ -53,19 +53,41 @@
 
                 <div class="count-wrap">
                     <div class="count-text">
+                        <div class="">Počet kusů</div>
                         <div class="">
-                            Počet kusů
-                        </div>
-                        <div class="">
-                            <span class="real-count"><input type="number" name="pocet" min="1" max="10" value="1" style="width: 3em"/></span> kusy
+                            <span class="real-count"><input type="number" name="pocet" min="0" max="10" value="0" style="width: 3em"/></span>
                         </div>
                     </div>
                 </div>
+                <div class="">350,-</div>
+                <input type="hidden" class="itemPrice" name="price" value="350">
+            </div>
+
+            <div class="item">
+                <div class="item-poster">
+                    <img src="img/kniha.png" alt="">
+                </div>
+                <div class="name">
+                    <h3>Láska z Bali</h3>
+                </div>
+
+                <div class="description">Elektronická</div>
+
+                <div class="count-wrap">
+                    <div class="count-text">
+                        <div class="">Počet kusů</div>
+                        <div class="">
+                            <span class="real-count"><input type="number" name="pocet" min="0" max="10" value="0" style="width: 3em"/></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="">200,-</div>
+                <input type="hidden" class="itemPrice" name="price" value="200">
             </div>
 
             <div class="suma">
-                <div class="cena">Cena za jeden výtisk: 350,- Kč<br>
-                                    Poštovné a balné: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;69,- Kč</div>
+                <div class="cena">Poštovné a balné: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;69,- Kč</div>
+                  <div id="sumaSumarum"><div>Celkem</div> <div>0,- Kč</div></div>
             </div>
 
             <div class="shipping">
@@ -109,3 +131,37 @@
 <?php
 require_once 'temp/footer.html';
 ?>
+<script type="text/javascript">
+  var items = document.querySelectorAll('.item');
+  var countInput = document.querySelectorAll('[name=pocet]');
+  var countPrice = document.querySelectorAll('[name=price]');
+  var sumaCount = 0;
+  var sumaPrice = 0;
+
+
+  //po načtení stránky s ezavolá getSuma function();
+  window.addEventListener("load", function(){
+      getSuma();
+  })
+
+  //pokud se klikne na countInput --- zavolá se funkce getSuma
+  for (var i = 0; i < countInput.length; i++) {
+    countInput[i].onchange = function(){getSuma()};
+  }
+
+  //funkce pro získaní sumy kterou klient zapaltí
+  function getSuma(){
+    for (var i = 0; i < countInput.length; i++) {
+    //  sumaCount += Number(countInput[i].value);
+      sumaPrice += Number(countPrice[i].value) * Number(countInput[i].value);
+    }
+
+    if(sumaPrice > 0){
+      sumaPrice += 69;
+    }
+
+    var div = "<div>Celkem</div><div>";
+    document.querySelector('#sumaSumarum').innerHTML = div + sumaPrice + ",- Kč</div>";
+    sumaPrice = 0;
+  }
+</script>

@@ -166,6 +166,15 @@ nav li a:hover{
   text-align: center;
 }
 
+#sumaSumarum {
+  text-align: right;
+  margin-right: 13px;
+  font-weight: bold;
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
 #instalerie{
   background: #F3F3F3;
   height: 100%;
@@ -475,6 +484,8 @@ footer{
 
 #order-list .cena{
   margin-right: 10px;
+  width: 100%;
+  text-align: right;
 }
 
 #order-list .btn-transparent:hover {
@@ -551,6 +562,7 @@ footer{
   align-content: center;
   justify-content: flex-end;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .shipping label{
