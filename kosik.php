@@ -55,12 +55,13 @@
                     <div class="count-text">
                         <div class="">Počet kusů</div>
                         <div class="">
-                            <span class="real-count"><input type="number" name="pocet" min="0" max="10" value="0" style="width: 3em"/></span>
+                            <span class="real-count"><input type="number" class="count" name="pocet[]" min="0" max="10" value="0" style="width: 3em" autocomplete="off" /></span>
                         </div>
                     </div>
                 </div>
                 <div class="">350,-</div>
-                <input type="hidden" class="itemPrice" name="price" value="350">
+                <input type="hidden" class="itemPrice" name="price[]" value="350">
+                <input type="hidden" class="nameofproduct" name="name[]" value="paper">
             </div>
 
             <div class="item">
@@ -77,12 +78,13 @@
                     <div class="count-text">
                         <div class="">Počet kusů</div>
                         <div class="">
-                            <span class="real-count"><input type="number" name="pocet" min="0" max="10" value="0" style="width: 3em"/></span>
+                            <span class="real-count"><input type="number" class="count" name="pocet[]" min="0" max="10" value="0" style="width: 3em" autocomplete="off" /></span>
                         </div>
                     </div>
                 </div>
                 <div class="">200,-</div>
-                <input type="hidden" class="itemPrice" name="price" value="200">
+                <input type="hidden" class="itemPrice" name="price[]" value="200">
+                <input type="hidden" class="nameofproduct" name="name[]" value="ebook">
             </div>
 
             <div class="suma">
@@ -133,8 +135,8 @@ require_once 'temp/footer.html';
 ?>
 <script type="text/javascript">
   var items = document.querySelectorAll('.item');
-  var countInput = document.querySelectorAll('[name=pocet]');
-  var countPrice = document.querySelectorAll('[name=price]');
+  var countInput = document.querySelectorAll('.count');
+  var countPrice = document.querySelectorAll('.itemPrice');
   var sumaCount = 0;
   var sumaPrice = 0;
 
