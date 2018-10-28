@@ -133,12 +133,26 @@
     <tr class="bold">
         <th style="width: 230px">Položka</th><th style="text-align: right; width: 100px;">Cena za položku</th><th style="text-align: right; width: 70px;">Množství</th><th style="text-align: right; width: 110px;">Cena celkem s DPH</th>
     </tr>
-    <tr>
-        <td style="width: 230px"><?= $kniha ?></td><td style="width: 100px; text-align: right"><?= $cena ?>,00 CZK</td><td style="width: 70px; text-align: right"><?= $pocet ?> ks</td><td style="width: 110px; text-align: right"><?= $cena*$pocet ?>,00 CZK</td>
-    </tr>
-    <tr>
-        <td style="width: 230px">Záloha na Doprava Česko</td><td style="width: 100px; text-align: right"><?= $balne ?>,00 CZK</td><td style="width: 70px; text-align: right">1 ks</td><td style="width: 110px; text-align: right"><?= $balne ?>,00 CZK</td>
-    </tr>
+    <?php
+    foreach($items as $item):
+        if($item['pocet'] > 0):
+    ?>
+            <tr>
+                <td style="width: 230px"><?= $item['nazev'] ?></td><td style="width: 100px; text-align: right"><?= $item['price'] ?>,00 CZK</td><td style="width: 70px; text-align: right"><?= $item['pocet'] ?> ks</td><td style="width: 110px; text-align: right"><?= $item['price']*$item['pocet'] ?>,00 CZK</td>
+            </tr>
+            <?php
+            if ($item['nazev'] == 'paper'):
+            ?>
+                <tr>
+                    <td style="width: 230px">Záloha na Doprava Česko</td><td style="width: 100px; text-align: right"><?= $balne ?>,00 CZK</td><td style="width: 70px; text-align: right">1 ks</td><td style="width: 110px; text-align: right"><?= $balne ?>,00 CZK</td>
+                </tr>
+            <?php
+            endif;
+            ?>
+    <?php
+        endif;
+    endforeach;
+    ?>
 </table>
 <div></div>
 

@@ -17,6 +17,11 @@ foreach ($_POST as $key => $value){
     $$key = $value;
 }
 
+foreach($name as $key => $item){
+    $items[$key]['nazev'] = $item;
+    $items[$key]['price'] = $price[$key];
+    $items[$key]['pocet'] = $pocet[$key];
+}
 
 function render_email() {
     ob_start();
@@ -26,11 +31,6 @@ function render_email() {
     global $balne;
     global $cena;
     global $cena_kniha;
-    $cena   = 350;
-    $balne  = 69;
-    $cena_kniha = $cena*$pocet;
-    $cena = $cena*$pocet+$balne;
-    $kniha  = "Láska z Bali";
     $adresa = $ulice.", ".$mesto.", ".$psc;
     $varSym = getVarNum();
     saveNextVarNum($varSym);
@@ -57,11 +57,17 @@ function saveNextVarNum($varNum, $file = 'files/varNum.txt'){
 require_once 'lib/TCPDF/tcpdf.php';
 require_once 'lib/PHPMailer/PHPMailerAutoload.php';
 // gen faktury
-$cena   = 350;
-$balne  = 69;
+$cena_celkem    = 0;
+$balne          = 69;
+foreach($items as $item){
+    if($item['pocet'] > 0){
+        if($item['nazev'] == 'paper'){
+            $cena_celkem += $balne;
+        }
+    $cena_celkem += $item['price']*$item['pocet'];
+    }
+}
 $varSym = getVarNum();
-$cena_kniha = $cena*$pocet;
-$cena_celkem = $cena*$pocet+$balne;
 $kniha  = "Láska z Bali";
 
 ob_start();
@@ -109,8 +115,6 @@ if($result != false){
     <div style='display: inline; text-align: center;'>
    <div>
    <p>Potvrzení objednávky Vám bylo zasláno na Vámi uvedený e-mail</p>
-   <p>Cena knihy: $cena_kniha,- Kč</p>
-<p>Poštovné a balné: $balne,- Kč</p>
 <br>
    <p>Cena celkem: $cena_celkem,- Kč</p>
    <p>Přeji příjemné čtení,</p>
