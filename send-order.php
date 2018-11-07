@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST'){
 if (!isset($_POST['send'])){
     die('Un-authorized access!');
 }
-
+// This is where $name and $price sets up
 foreach ($_POST as $key => $value){
     $$key = $value;
 }
@@ -28,9 +28,7 @@ function render_email() {
     foreach ($_POST as $key => $value){
         $$key = $value;
     }
-    global $balne;
-    global $cena;
-    global $cena_kniha;
+    global $cena_celkem;
     $adresa = $ulice.", ".$mesto.", ".$psc;
     $varSym = getVarNum();
     saveNextVarNum($varSym);

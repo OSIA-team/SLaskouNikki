@@ -82,8 +82,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="">200,-</div>
-                <input type="hidden" class="itemPrice" name="price[]" value="200">
+                <div class="">300,-</div>
+                <input type="hidden" class="itemPrice" name="price[]" value="300">
                 <input type="hidden" class="nameofproduct" name="name[]" value="ebook">
             </div>
 
