@@ -20,5 +20,4 @@ if (isset($_POST['contactMe'])){
 
     mail('info@slaskouniki.cz', 'Dotaz z webu', $content);
     mail('Nicol.Villimova@seznam.cz', 'Dotaz z webu', $content);
-    mail('k.kosut@gmail.com', 'Dotaz z webu', $content);
 }

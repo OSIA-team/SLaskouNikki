@@ -17,8 +17,11 @@ foreach ($_POST as $key => $value){
     $$key = $value;
 }
 
+$nazvy = [  'ebook' => 'Láska z Bali - Elektronická',
+            'paper' => 'Láska z Bali - Pevná vazba'];
+
 foreach($name as $key => $item){
-    $items[$key]['nazev'] = $item;
+    $items[$key]['nazev'] = $nazvy[$item];
     $items[$key]['price'] = $price[$key];
     $items[$key]['pocet'] = $pocet[$key];
 }
@@ -59,7 +62,7 @@ $cena_celkem    = 0;
 $balne          = 69;
 foreach($items as $item){
     if($item['pocet'] > 0){
-        if($item['nazev'] == 'paper'){
+        if($item['nazev'] == 'Láska z Bali - Pevná vazba'){
             $cena_celkem += $balne;
         }
     $cena_celkem += $item['price']*$item['pocet'];
